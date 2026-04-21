@@ -9,6 +9,7 @@
 ```bash
 npm run ops:daily -- --region "서울 영등포구 여의도동"
 ```
+- 기본 임계치: `minRestaurants=700`, `maxEmptyMenusPct=50`
 
 CI 게이트:
 - GitHub Actions `Ops Daily Gate`에서 `ops:daily`를 PR 기준으로 자동 실행
@@ -17,10 +18,17 @@ CI 게이트:
 회귀 점검(권장, 배포 전):
 ```bash
 npm run audit:recommendation:full
+npm run audit:api
+```
+
+API 회귀(full, 인증 쿠키 필요):
+```bash
+npm run audit:api:full -- --base-url "http://127.0.0.1:3000" --cookie "sb-access-token=...; sb-refresh-token=..."
 ```
 
 결과 파일:
 - `docs/reports/recommendation-regression-latest.json`
+- `docs/reports/recommend-api-latest.json`
 
 ## 2) 수동 크롤링 절차
 1. Google 로그인 상태 확인

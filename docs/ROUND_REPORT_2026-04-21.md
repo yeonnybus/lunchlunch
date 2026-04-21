@@ -29,24 +29,29 @@
    - 백필 스크립트에서 메뉴 추론 + 시그널 재계산을 함께 수행하도록 확장
    - 파일: `src/lib/domain/menu-inference.ts`, `src/lib/crawler/normalizer.ts`, `scripts/backfill-restaurant-signals.ts`
 8. **DB 보강 + CI 게이트 연동**
-   - `backfill:signals` 실행으로 846건 재계산 반영
-   - `ops:daily`를 GitHub Actions PR 게이트로 추가
-   - 파일: `.github/workflows/ops-daily-gate.yml`, `src/lib/domain/restaurant-signals.ts`
+    - `backfill:signals` 실행으로 846건 재계산 반영
+    - `ops:daily`를 GitHub Actions PR 게이트로 추가
+    - 파일: `.github/workflows/ops-daily-gate.yml`, `src/lib/domain/restaurant-signals.ts`
+9. **품질 게이트 강화 + API 회귀 스크립트 추가**
+   - `ops:daily` 기본 임계치 `maxEmptyMenusPct`를 50으로 상향
+   - `/api/recommend/today` 계약 점검용 API 회귀 스크립트 추가(smoke/full)
+   - 파일: `scripts/ops-daily-healthcheck.ts`, `scripts/audit-recommend-api.ts`
 
 ## 검증 결과
 - `npm run check` 통과
 - `npm run build` 통과
 - `npm run ops:daily -- --region "서울 영등포구 여의도동"` 결과: `ok: true`
 - `npm run audit:recommendation:full` 결과: `ok: true` (20개 시나리오 전부 통과)
+- `npm run audit:api` 결과: `ok: true` (401 계약 스모크)
 - 회귀 결과 저장: `docs/reports/recommendation-regression-latest.json`
-- `backfill:signals` 이후 `emptyMenusPct`: 71.5% -> 37.2%
+- `backfill:signals` 이후 `emptyMenusPct`: 71.5% -> 26.7%, `emptyCuisineTagsPct`: 54.7% -> 0.2%
 
 ## 현재 상태 평가
 - 햄버거/일식/중식/한식/양식/베트남 기본 회귀 시나리오에서 재현 이슈 없음
 - 운영 자동 점검이 붙어 재발 탐지 속도 향상
-- 다만 데이터 측면에서 `menus` 공백률이 여전히 높아 장기적으로 추가 데이터 보강 필요
+- `menus` 공백률은 개선됐지만(26.7%) 25% 이하를 목표로 추가 보강 여지 있음
 
 ## 다음 라운드 권장 작업
-1. `menus` 공백 대량 백필 고도화(특히 중식/한식/일식)
-2. API 레벨 회귀 테스트 추가(실제 `/api/recommend/today` 응답 검사)
-3. 점검 결과를 PR/배포 파이프라인에 필수 게이트로 연결
+1. `audit:api:full`을 스테이징(인증 쿠키 주입) 정기 점검으로 운영화
+2. `menus` 공백률 25% 목표로 크롤링 쿼리 확장 + 백필 루프 반복
+3. 점검 결과를 PR/배포 파이프라인에서 required check로 지정

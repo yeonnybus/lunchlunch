@@ -26,6 +26,8 @@ npm run backfill:signals
 npm run recommend:dry -- --region "서울 영등포구 여의도동" --user-id "<UUID>"
 npm run ops:daily -- --region "서울 영등포구 여의도동"
 npm run audit:recommendation:full
+npm run audit:api
+npm run audit:api:full -- --base-url "http://127.0.0.1:3000" --cookie "sb-access-token=...; sb-refresh-token=..."
 ```
 
 ## 문서

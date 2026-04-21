@@ -13,6 +13,8 @@
     "crawl:matrix": "tsx scripts/run-crawl-matrix.ts",
     "crawl:yeouido-full": "tsx scripts/run-crawl-yeouido-full.ts",
     "backfill:signals": "tsx scripts/backfill-restaurant-signals.ts",
+    "audit:api": "tsx scripts/audit-recommend-api.ts --suite smoke",
+    "audit:api:full": "tsx scripts/audit-recommend-api.ts --suite full --out docs/reports/recommend-api-latest.json",
     "audit:recommendation": "tsx scripts/audit-recommendation-integrity.ts",
     "audit:recommendation:full": "tsx scripts/audit-recommendation-integrity.ts --suite full --out docs/reports/recommendation-regression-latest.json",
     "ops:daily": "tsx scripts/ops-daily-healthcheck.ts",

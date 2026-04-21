@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "suite": "smoke",
+  "baseUrl": "http://127.0.0.1:3000",
+  "generatedAt": "2026-04-21T14:21:19.186Z",
+  "results": [
+    {
+      "id": "unauthorized_without_cookie",
+      "pass": true,
+      "status": 401,
+      "expectedStatus": 401,
+      "message": "ok"
+    }
+  ],
+  "failures": []
+}

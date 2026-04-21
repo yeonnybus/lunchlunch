@@ -2,13 +2,13 @@
   "ok": true,
   "region": "서울 영등포구 여의도동",
   "suite": "full",
-  "generatedAt": "2026-04-21T14:03:18.834Z",
+  "generatedAt": "2026-04-21T14:20:54.008Z",
   "categoryStats": {
     "total": 846,
-    "emptyMenus": 315,
-    "emptyCuisineTags": 6,
-    "emptyMenusPct": 37.2,
-    "emptyCuisineTagsPct": 0.7
+    "emptyMenus": 226,
+    "emptyCuisineTags": 2,
+    "emptyMenusPct": 26.7,
+    "emptyCuisineTagsPct": 0.2
   },
   "scenarios": [
     {
@@ -26,12 +26,12 @@
         "돼지불백",
         "쌈밥"
       ],
-      "matchedCount": 7,
+      "matchedCount": 8,
       "pass": true,
       "topRestaurants": [
         "여의녘",
         "찹쌀순대집",
-        "타마"
+        "미도인 파이낸스여의도"
       ]
     },
     {
@@ -53,8 +53,8 @@
       "pass": true,
       "topRestaurants": [
         "옥된장 여의도점",
-        "완백부대찌개 여의도식객촌점",
-        "오복수산대구 여의도점"
+        "푸에르코 여의도",
+        "여의도우삼겹 집 여의도역본점"
       ]
     },
     {
@@ -76,8 +76,8 @@
       "pass": true,
       "topRestaurants": [
         "미분당 여의도점",
-        "퍼틴 여의도IFC몰점",
-        "파파호 여의도점"
+        "포아시아",
+        "포메인 여의도점"
       ]
     },
     {
@@ -99,8 +99,8 @@
       "pass": true,
       "topRestaurants": [
         "도원스타일 더현대서울점",
-        "열빈",
-        "홍보석"
+        "카이 여의도점",
+        "모던눌랑 여의도점"
       ]
     },
     {
@@ -123,7 +123,7 @@
       "topRestaurants": [
         "마라라 마라탕&마라샹궈 여의도점",
         "마유유 마라탕 더현대서울점",
-        "도원스타일 더현대서울점"
+        "취향마라 여의도점"
       ]
     },
     {
@@ -139,12 +139,12 @@
         "돈부리",
         "사케동"
       ],
-      "matchedCount": 5,
+      "matchedCount": 8,
       "pass": true,
       "topRestaurants": [
-        "타마",
-        "쿠사 서여의도점",
-        "우니도 더현대 서울"
+        "미도인 파이낸스여의도",
+        "오미식당 IFC몰점",
+        "무안회관 여의도점"
       ]
     },
     {
@@ -164,9 +164,9 @@
       "matchedCount": 8,
       "pass": true,
       "topRestaurants": [
-        "스시젠",
-        "스시온정",
-        "미도인 파이낸스여의도"
+        "아오리의행방불명 여의도점",
+        "이와타",
+        "하카타분코 여의도점"
       ]
     },
     {
@@ -208,9 +208,9 @@
       "matchedCount": 8,
       "pass": true,
       "topRestaurants": [
+        "37.5 시그니처 여의도점",
         "심퍼티쿠시 여의도점",
-        "리스토란테 에오",
-        "퀴진 알"
+        "리스토란테 에오"
       ]
     },
     {
@@ -274,8 +274,8 @@
       "pass": true,
       "topRestaurants": [
         "미분당 여의도점",
-        "퍼틴 여의도IFC몰점",
-        "파파호 여의도점"
+        "포아시아",
+        "포메인 여의도점"
       ]
     },
     {
@@ -297,7 +297,7 @@
       "topRestaurants": [
         "미미쌀국수",
         "미분당 여의도점",
-        "퍼틴 여의도IFC몰점"
+        "포아시아"
       ]
     },
     {
@@ -318,9 +318,9 @@
       "matchedCount": 8,
       "pass": true,
       "topRestaurants": [
-        "The정 돈까스",
-        "세이버리그린",
-        "돈대리 돈까스백반"
+        "틈새라면 여의도KBS본관점",
+        "미도인 파이낸스여의도",
+        "The정 돈까스"
       ]
     },
     {
@@ -387,9 +387,9 @@
       "matchedCount": 8,
       "pass": true,
       "topRestaurants": [
+        "돈대리 돈까스백반",
         "옥된장 여의도점",
-        "가양칼국수버섯매운탕",
-        "강서버섯샤브칼국수"
+        "하루순대국밥"
       ]
     },
     {
@@ -411,8 +411,8 @@
       "pass": true,
       "topRestaurants": [
         "버거플리즈",
-        "카레나이스 여의도점",
-        "야키토리묵 여의도점"
+        "여의도우아동",
+        "카레나이스 여의도점"
       ]
     },
     {
@@ -433,9 +433,9 @@
       "matchedCount": 8,
       "pass": true,
       "topRestaurants": [
+        "파파이스 여의도역점",
         "스시젠",
-        "스시온정",
-        "노조미일식"
+        "스시온정"
       ]
     },
     {
@@ -458,7 +458,7 @@
       "topRestaurants": [
         "돈대리 돈까스백반",
         "옥된장 여의도점",
-        "여의도우아동"
+        "풀향기보쌈칼국수"
       ]
     }
   ],

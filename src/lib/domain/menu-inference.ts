@@ -48,6 +48,25 @@ const menuAliasToCanonical: Array<{ alias: string; canonical: string }> = [
   { alias: "샐러드", canonical: "샐러드" },
   { alias: "김밥", canonical: "김밥" },
   { alias: "치킨", canonical: "치킨" },
+  { alias: "비빔밥", canonical: "비빔밥" },
+  { alias: "덮밥", canonical: "돈부리" },
+  { alias: "백반", canonical: "백반" },
+  { alias: "정식", canonical: "백반" },
+  { alias: "냉면", canonical: "냉면" },
+  { alias: "라면", canonical: "라멘" },
+  { alias: "부대찌개", canonical: "부대찌개" },
+  { alias: "샌드위치", canonical: "샌드위치" },
+  { alias: "브런치", canonical: "브런치" },
+  { alias: "족발", canonical: "족발" },
+  { alias: "보쌈", canonical: "보쌈" },
+  { alias: "곰탕", canonical: "곰탕" },
+  { alias: "설렁탕", canonical: "설렁탕" },
+  { alias: "삼겹살", canonical: "삼겹살" },
+  { alias: "갈비", canonical: "갈비" },
+  { alias: "불고기", canonical: "불고기" },
+  { alias: "훠궈", canonical: "훠궈" },
+  { alias: "탕수육", canonical: "탕수육" },
+  { alias: "딤섬", canonical: "딤섬" },
 ];
 
 const categorySeedRules: Array<{ keyword: string; menus: string[] }> = [
@@ -67,6 +86,35 @@ const categorySeedRules: Array<{ keyword: string; menus: string[] }> = [
   { keyword: "파스타", menus: ["파스타"] },
   { keyword: "돈까스", menus: ["돈까스"] },
   { keyword: "샐러드", menus: ["샐러드"] },
+  { keyword: "분식", menus: ["김밥", "떡볶이"] },
+  { keyword: "백반", menus: ["백반"] },
+  { keyword: "한정식", menus: ["백반", "불고기"] },
+  { keyword: "냉면", menus: ["냉면"] },
+  { keyword: "라면", menus: ["라멘"] },
+  { keyword: "샌드위치", menus: ["샌드위치"] },
+  { keyword: "브런치", menus: ["브런치", "샐러드"] },
+  { keyword: "족발", menus: ["족발"] },
+  { keyword: "보쌈", menus: ["보쌈"] },
+  { keyword: "삼겹살", menus: ["삼겹살"] },
+  { keyword: "갈비", menus: ["갈비"] },
+  { keyword: "불고기", menus: ["불고기"] },
+  { keyword: "중화", menus: ["짜장면", "짬뽕"] },
+  { keyword: "훠궈", menus: ["훠궈"] },
+  { keyword: "딤섬", menus: ["딤섬"] },
+  { keyword: "일본", menus: ["초밥", "우동"] },
+  { keyword: "스시", menus: ["초밥"] },
+  { keyword: "규카츠", menus: ["돈까스"] },
+  { keyword: "베이커리", menus: ["샌드위치"] },
+];
+
+const fallbackCuisineRules: Array<{ keyword: string; menus: string[] }> = [
+  { keyword: "burger", menus: ["햄버거"] },
+  { keyword: "japanese", menus: ["초밥", "우동"] },
+  { keyword: "korean", menus: ["국밥", "김치찌개"] },
+  { keyword: "chinese", menus: ["짜장면", "짬뽕"] },
+  { keyword: "western", menus: ["파스타", "피자"] },
+  { keyword: "vietnamese", menus: ["쌀국수", "분짜"] },
+  { keyword: "음식점", menus: ["백반"] },
 ];
 
 function flattenRawText(raw: Json | null) {
@@ -112,8 +160,17 @@ export function inferMenusFromRestaurant(
     .map((item) => item.canonical);
 
   const fromCategorySeed = categorySeedRules
-    .filter((rule) => normalizeText(category ?? "").includes(normalizeText(rule.keyword)))
+    .filter((rule) => haystack.includes(normalizeText(rule.keyword)))
     .flatMap((rule) => rule.menus);
 
-  return dedupeMenus([...existingMenus, ...fromAlias, ...fromCategorySeed]).slice(0, 8);
+  const inferred = dedupeMenus([...existingMenus, ...fromAlias, ...fromCategorySeed]).slice(0, 8);
+  if (inferred.length > 0) {
+    return inferred;
+  }
+
+  const fallbackMenus = fallbackCuisineRules
+    .filter((rule) => haystack.includes(normalizeText(rule.keyword)))
+    .flatMap((rule) => rule.menus);
+
+  return dedupeMenus([...fallbackMenus]).slice(0, 8);
 }

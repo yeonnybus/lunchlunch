@@ -38,7 +38,7 @@ function dedupeMenus(menus: string[]) {
 async function main() {
   const region = readArg("region") || process.env.CRAWL_REGION || "서울 영등포구 여의도동";
   const minRestaurants = Number(readArg("min-restaurants") ?? "700");
-  const maxEmptyMenusPct = Number(readArg("max-empty-menus-pct") ?? "75");
+  const maxEmptyMenusPct = Number(readArg("max-empty-menus-pct") ?? "50");
 
   const supabase = createServiceRoleClient();
   const total = await countRestaurantsByRegion(supabase, region);
