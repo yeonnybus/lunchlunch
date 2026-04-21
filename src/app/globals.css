@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 44 100% 97%;
+  --foreground: 215 28% 17%;
+  --card: 0 0% 100%;
+  --card-foreground: 215 28% 17%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 28% 17%;
+  --primary: 18 89% 56%;
+  --primary-foreground: 40 100% 98%;
+  --secondary: 165 68% 38%;
+  --secondary-foreground: 45 75% 96%;
+  --muted: 39 44% 92%;
+  --muted-foreground: 215 16% 42%;
+  --accent: 48 92% 60%;
+  --accent-foreground: 216 22% 16%;
+  --destructive: 0 78% 57%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 36 50% 82%;
+  --input: 36 50% 82%;
+  --ring: 18 89% 56%;
+  --radius: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 215 35% 11%;
+    --foreground: 43 82% 94%;
+    --card: 215 31% 14%;
+    --card-foreground: 43 82% 94%;
+    --popover: 215 31% 14%;
+    --popover-foreground: 43 82% 94%;
+    --primary: 20 91% 57%;
+    --primary-foreground: 30 45% 10%;
+    --secondary: 164 67% 36%;
+    --secondary-foreground: 43 82% 94%;
+    --muted: 214 25% 22%;
+    --muted-foreground: 35 24% 76%;
+    --accent: 46 93% 54%;
+    --accent-foreground: 215 35% 11%;
+    --destructive: 0 63% 43%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 26% 27%;
+    --input: 214 26% 27%;
+    --ring: 20 91% 57%;
+  }
+}
+
+body {
+  @apply bg-background text-foreground;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 0% 0%, rgba(251, 191, 36, 0.23), transparent 32%),
+    radial-gradient(circle at 100% 0%, rgba(16, 185, 129, 0.2), transparent 38%),
+    linear-gradient(130deg, rgba(255, 251, 235, 0.7), rgba(255, 250, 245, 0.9));
+  background-attachment: fixed;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight;
+  }
+}

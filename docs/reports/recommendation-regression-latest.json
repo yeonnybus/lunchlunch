@@ -1,0 +1,522 @@
+{
+  "ok": true,
+  "region": "서울 영등포구 여의도동",
+  "suite": "full",
+  "generatedAt": "2026-04-21T14:03:18.834Z",
+  "categoryStats": {
+    "total": 846,
+    "emptyMenus": 315,
+    "emptyCuisineTags": 6,
+    "emptyMenusPct": 37.2,
+    "emptyCuisineTagsPct": 0.7
+  },
+  "scenarios": [
+    {
+      "scenario": "KR_01_jeyuk_variant_collision",
+      "category": "한식",
+      "inputMenus": [
+        "제육볶음",
+        "제육덮밥",
+        "돼지불백",
+        "쌈밥"
+      ],
+      "normalizedMenus": [
+        "제육볶음",
+        "제육덮밥",
+        "돼지불백",
+        "쌈밥"
+      ],
+      "matchedCount": 7,
+      "pass": true,
+      "topRestaurants": [
+        "여의녘",
+        "찹쌀순대집",
+        "타마"
+      ]
+    },
+    {
+      "scenario": "KR_02_stew_cluster_disambiguation",
+      "category": "한식",
+      "inputMenus": [
+        "김치찌개",
+        "순두부찌개",
+        "된장찌개",
+        "부대찌개"
+      ],
+      "normalizedMenus": [
+        "김치찌개",
+        "순두부찌개",
+        "된장찌개",
+        "부대찌개"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "옥된장 여의도점",
+        "완백부대찌개 여의도식객촌점",
+        "오복수산대구 여의도점"
+      ]
+    },
+    {
+      "scenario": "KR_03_rice_noodle_boundary",
+      "category": "한식",
+      "inputMenus": [
+        "비빔밥",
+        "돌솥비빔밥",
+        "비빔국수",
+        "막국수"
+      ],
+      "normalizedMenus": [
+        "비빔밥",
+        "돌솥비빔밥",
+        "비빔국수",
+        "막국수"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "미분당 여의도점",
+        "퍼틴 여의도IFC몰점",
+        "파파호 여의도점"
+      ]
+    },
+    {
+      "scenario": "CN_01_jajang_spelling_variants",
+      "category": "중식",
+      "inputMenus": [
+        "짜장면",
+        "자장면",
+        "간짜장",
+        "삼선짜장"
+      ],
+      "normalizedMenus": [
+        "짜장면",
+        "자장면",
+        "간짜장",
+        "삼선짜장"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "도원스타일 더현대서울점",
+        "열빈",
+        "홍보석"
+      ]
+    },
+    {
+      "scenario": "CN_02_jjamppong_mala_confusion",
+      "category": "중식",
+      "inputMenus": [
+        "짬뽕",
+        "차돌짬뽕",
+        "마라탕",
+        "마라샹궈"
+      ],
+      "normalizedMenus": [
+        "짬뽕",
+        "차돌짬뽕",
+        "마라탕",
+        "마라샹궈"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "마라라 마라탕&마라샹궈 여의도점",
+        "마유유 마라탕 더현대서울점",
+        "도원스타일 더현대서울점"
+      ]
+    },
+    {
+      "scenario": "JP_01_donburi_token_normalization",
+      "category": "일식",
+      "inputMenus": [
+        "규동",
+        "가츠동",
+        "사케동",
+        "돈부리"
+      ],
+      "normalizedMenus": [
+        "돈부리",
+        "사케동"
+      ],
+      "matchedCount": 5,
+      "pass": true,
+      "topRestaurants": [
+        "타마",
+        "쿠사 서여의도점",
+        "우니도 더현대 서울"
+      ]
+    },
+    {
+      "scenario": "JP_02_ramen_udon_soba_split",
+      "category": "일식",
+      "inputMenus": [
+        "돈코츠라멘",
+        "미소라멘",
+        "우동",
+        "냉모밀"
+      ],
+      "normalizedMenus": [
+        "라멘",
+        "우동",
+        "냉모밀"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "스시젠",
+        "스시온정",
+        "미도인 파이낸스여의도"
+      ]
+    },
+    {
+      "scenario": "WS_01_pasta_pizza_cafe_noise",
+      "category": "양식",
+      "inputMenus": [
+        "알리오올리오",
+        "까르보나라",
+        "마르게리타",
+        "라자냐"
+      ],
+      "normalizedMenus": [
+        "파스타",
+        "피자"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "리스토란테 에오",
+        "퀴진 알",
+        "도깨비굴"
+      ]
+    },
+    {
+      "scenario": "WS_02_brunch_western_boundary",
+      "category": "양식",
+      "inputMenus": [
+        "파스타",
+        "리조또",
+        "피자",
+        "브런치"
+      ],
+      "normalizedMenus": [
+        "파스타",
+        "리조또",
+        "피자",
+        "브런치"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "심퍼티쿠시 여의도점",
+        "리스토란테 에오",
+        "퀴진 알"
+      ]
+    },
+    {
+      "scenario": "BG_01_core_burger_variants",
+      "category": "버거",
+      "inputMenus": [
+        "치즈버거",
+        "불고기버거",
+        "치킨버거",
+        "더블버거"
+      ],
+      "normalizedMenus": [
+        "햄버거"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "바스버거 여의도점",
+        "번패티번 더현대서울",
+        "릴버거 더현대서울점"
+      ]
+    },
+    {
+      "scenario": "BG_02_burger_side_item_leakage",
+      "category": "버거",
+      "inputMenus": [
+        "새우버거",
+        "베이컨버거",
+        "감자튀김",
+        "밀크셰이크"
+      ],
+      "normalizedMenus": [
+        "햄버거",
+        "감자튀김",
+        "밀크셰이크"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "바스버거 여의도점",
+        "번패티번 더현대서울",
+        "릴버거 더현대서울점"
+      ]
+    },
+    {
+      "scenario": "VN_01_pho_bun_rice_noodle_conflict",
+      "category": "베트남",
+      "inputMenus": [
+        "쌀국수",
+        "소고기쌀국수",
+        "분짜",
+        "분보남보"
+      ],
+      "normalizedMenus": [
+        "쌀국수",
+        "소고기쌀국수",
+        "분짜",
+        "분보남보"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "미분당 여의도점",
+        "퍼틴 여의도IFC몰점",
+        "파파호 여의도점"
+      ]
+    },
+    {
+      "scenario": "VN_02_banhmi_snack_meal_boundary",
+      "category": "베트남",
+      "inputMenus": [
+        "반미",
+        "치킨반미",
+        "월남쌈",
+        "쌀국수"
+      ],
+      "normalizedMenus": [
+        "반미",
+        "월남쌈",
+        "쌀국수"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "미미쌀국수",
+        "미분당 여의도점",
+        "퍼틴 여의도IFC몰점"
+      ]
+    },
+    {
+      "scenario": "VAL_01_under_10000_mixed_set",
+      "category": "가성비",
+      "inputMenus": [
+        "김밥",
+        "라면",
+        "덮밥",
+        "돈까스"
+      ],
+      "normalizedMenus": [
+        "김밥",
+        "라면",
+        "덮밥",
+        "돈까스"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "The정 돈까스",
+        "세이버리그린",
+        "돈대리 돈까스백반"
+      ]
+    },
+    {
+      "scenario": "VAL_02_lunch_special_keyword_drift",
+      "category": "가성비",
+      "inputMenus": [
+        "점심특선",
+        "런치세트",
+        "오늘의메뉴",
+        "정식"
+      ],
+      "normalizedMenus": [
+        "점심특선",
+        "런치세트",
+        "오늘의메뉴",
+        "정식"
+      ],
+      "matchedCount": 6,
+      "pass": true,
+      "topRestaurants": [
+        "영의정 한정식",
+        "해담채 여의도점",
+        "백년도담솥밥"
+      ]
+    },
+    {
+      "scenario": "VAL_03_price_phrase_variation",
+      "category": "가성비",
+      "inputMenus": [
+        "김밥",
+        "우동",
+        "국밥",
+        "돈까스"
+      ],
+      "normalizedMenus": [
+        "김밥",
+        "우동",
+        "국밥",
+        "돈까스"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "여의도우아동",
+        "돈대리 돈까스백반",
+        "여의도소바우동"
+      ]
+    },
+    {
+      "scenario": "NOPREMIUM_01_casual_korean_guardrail",
+      "category": "프리미엄제외",
+      "inputMenus": [
+        "국밥",
+        "백반",
+        "칼국수",
+        "김치찌개"
+      ],
+      "normalizedMenus": [
+        "국밥",
+        "백반",
+        "칼국수",
+        "김치찌개"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "옥된장 여의도점",
+        "가양칼국수버섯매운탕",
+        "강서버섯샤브칼국수"
+      ]
+    },
+    {
+      "scenario": "NOPREMIUM_02_casual_global_guardrail",
+      "category": "프리미엄제외",
+      "inputMenus": [
+        "우동",
+        "버거",
+        "쌀국수",
+        "파스타"
+      ],
+      "normalizedMenus": [
+        "우동",
+        "햄버거",
+        "쌀국수",
+        "파스타"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "버거플리즈",
+        "카레나이스 여의도점",
+        "야키토리묵 여의도점"
+      ]
+    },
+    {
+      "scenario": "DIST_01_fast_lunch_nearby_preference",
+      "category": "거리선호",
+      "inputMenus": [
+        "김밥",
+        "우동",
+        "샌드위치",
+        "버거"
+      ],
+      "normalizedMenus": [
+        "김밥",
+        "우동",
+        "샌드위치",
+        "햄버거"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "스시젠",
+        "스시온정",
+        "노조미일식"
+      ]
+    },
+    {
+      "scenario": "DIST_02_rainyday_short_walk_bias",
+      "category": "거리선호",
+      "inputMenus": [
+        "국밥",
+        "돈까스",
+        "덮밥",
+        "쌀국수"
+      ],
+      "normalizedMenus": [
+        "국밥",
+        "돈까스",
+        "덮밥",
+        "쌀국수"
+      ],
+      "matchedCount": 8,
+      "pass": true,
+      "topRestaurants": [
+        "돈대리 돈까스백반",
+        "옥된장 여의도점",
+        "여의도우아동"
+      ]
+    }
+  ],
+  "failures": [],
+  "categorySummary": [
+    {
+      "category": "한식",
+      "total": 3,
+      "pass": 3,
+      "passRate": 100
+    },
+    {
+      "category": "중식",
+      "total": 2,
+      "pass": 2,
+      "passRate": 100
+    },
+    {
+      "category": "일식",
+      "total": 2,
+      "pass": 2,
+      "passRate": 100
+    },
+    {
+      "category": "양식",
+      "total": 2,
+      "pass": 2,
+      "passRate": 100
+    },
+    {
+      "category": "버거",
+      "total": 2,
+      "pass": 2,
+      "passRate": 100
+    },
+    {
+      "category": "베트남",
+      "total": 2,
+      "pass": 2,
+      "passRate": 100
+    },
+    {
+      "category": "가성비",
+      "total": 3,
+      "pass": 3,
+      "passRate": 100
+    },
+    {
+      "category": "프리미엄제외",
+      "total": 2,
+      "pass": 2,
+      "passRate": 100
+    },
+    {
+      "category": "거리선호",
+      "total": 2,
+      "pass": 2,
+      "passRate": 100
+    }
+  ]
+}
